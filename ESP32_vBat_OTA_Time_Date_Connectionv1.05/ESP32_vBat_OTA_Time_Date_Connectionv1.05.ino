@@ -19,8 +19,8 @@ char* fwname = "ESP32_vBat_OTA_Time_Date_Connectionv1.05";
 char* criticalWiFi = "N";  // If Y, system reset performed after WiFi reconect fail followed by user defined timeout (criticalWiFiTimeOut) loop.
 char* criticalWiFiTimeOut = "1000";  // default 1 second
 char* screen_select = "Main_Screen";  // Call screen to display on base unit
-const char* ssid = "sec01";
-const char* password = "2018wiskeylima!";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 int MainDisplay = 1;
 int HighFor = 50;
 int LowFor = 10000; //10secs
@@ -96,7 +96,7 @@ void setup() {
   //  BatteryCheck();
   VBAT = (float)(analogRead(vbatPin)) / 4095 * 2 * 3.3 * 1.1;
   StartWiFi();
-  WiFi.softAP("TBeamLoRa_CnC", "alphaalpha");
+  WiFi.softAP("TBeamLoRa_CnC", "AP_PASSWORD");
   Start_Time_Services();
   Setup_Interrupts_and_Initialise_Clock();       // Now setup a timer interrupt to occur every 1-second, to keep seconds accurate
   server.begin();
