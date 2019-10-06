@@ -14,4 +14,3 @@ HAs AP and Station mode built in, either connection will allow an Over the Air u
 This is ongoing.
 
 Current issues - 
-Reconnect time has not been resolved yet, time displayed is there as a place holder at the moment.
